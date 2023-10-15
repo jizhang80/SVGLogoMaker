@@ -6,7 +6,6 @@ import questions from "./lib/questions.js";
 inquirer
 .prompt(questions)
 .then((answer)=>{
-    console.log(answer);
     // create shape
     const shape = shapeFactory(
         answer.shape, 
