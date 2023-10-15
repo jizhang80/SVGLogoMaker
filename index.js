@@ -1,6 +1,5 @@
 import inquirer from "inquirer";
-import pkg from 'validate-color';
-const {validateHTMLColorHex, validateHTMLColorName} = pkg;
+import Shape from "./lib/shapes.js";
 
 const questions = [
     {
@@ -21,7 +20,7 @@ const questions = [
         name: 'textColor',
         message: 'Please enter a text color keyword here(e.g. red/RED/#ff0000): ',
         validate(colorStr) {
-            if (validateHTMLColorHex(colorStr)||validateHTMLColorName(colorStr)) {
+            if (Shape.isColor(colorStr)) {
                 return true;
             };
             return 'Please enter named color(such as red/blue) or a hexadecimal color number'
@@ -40,7 +39,7 @@ const questions = [
         name: 'shapeColor',
         message: 'Please enter a shape color keyword here(e.g. red/RED/#ff0000): ',
         validate(colorStr) {
-            if (validateHTMLColorHex(colorStr)||validateHTMLColorName(colorStr)) {
+            if (Shape.isColor(colorStr)) {
                 return true;
             };
             return 'Please enter named color(such as red/blue) or a hexadecimal color number'
