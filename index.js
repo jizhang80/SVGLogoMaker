@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import Shape from "./lib/shapes.js";
+import shapeFactory from "./lib/shapeFactory.js";
 
 const questions = [
     {
@@ -31,7 +32,7 @@ const questions = [
         type: 'list',
         name: 'shape',
         message: 'Please choose a shape: ',
-        choices: ['circle', 'triangle', 'square'],
+        choices: ['Circle', 'Triangle', 'Square'],
     },
     {
         // ask for shape color
@@ -51,4 +52,13 @@ inquirer
 .prompt(questions)
 .then((answer)=>{
     console.log(answer);
+    // create shape
+    const shape = shapeFactory(answer.shape);
+    // fill shape params
+    shape.shape = answer.shape;
+    shape.text = answer.text;
+    shape.textColor = answer.textColor;
+    shape.color = answer.shapeColor;
+    // save shape svg file
+    shape.draw();
 })
