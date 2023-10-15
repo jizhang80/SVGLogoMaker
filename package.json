@@ -1,0 +1,28 @@
+{
+  "name": "svglogomaker",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "svg logo maker",
+  "exports": "./index.js",
+  "directories": {
+    "example": "Example svg file(s) created with the app",
+    "lib": "Folder for classes or functions"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jizhang80/SVGLogoMaker.git"
+  },
+  "author": "Ji Zhang (Jimmy)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jizhang80/SVGLogoMaker/issues"
+  },
+  "homepage": "https://github.com/jizhang80/SVGLogoMaker#readme",
+  "dependencies": {
+    "inquirer": "^9.2.11",
+    "validate-color": "^2.2.4"
+  }
+}
