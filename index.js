@@ -8,12 +8,12 @@ inquirer
 .then((answer)=>{
     console.log(answer);
     // create shape
-    const shape = shapeFactory(answer.shape);
-    // fill shape params
-    shape.shape = answer.shape;
-    shape.text = answer.text;
-    shape.textColor = answer.textColor;
-    shape.color = answer.shapeColor;
+    const shape = shapeFactory(
+        answer.shape, 
+        answer.shapeColor, 
+        answer.text, 
+        answer.textColor
+    );
     // save shape svg file
     shape.draw();
 })
