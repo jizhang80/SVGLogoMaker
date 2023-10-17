@@ -1,7 +1,6 @@
-import inquirer from "inquirer";
-import shapeFactory from "./lib/shapeFactory.js";
-import questions from "./lib/questions.js";
-
+const inquirer = require('inquirer');
+const shapeFactory = require("./lib/shapeFactory.js");
+const questions = require("./lib/questions.js");
 
 inquirer
 .prompt(questions)
