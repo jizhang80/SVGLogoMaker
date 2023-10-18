@@ -1,5 +1,14 @@
 # SVG Logo Maker
 
+## walkthrough video link
+[https://drive.google.com/file/d/1-uJKRQS5hjKJNLQaM0xBrSqHsrgoFTXE/view](https://drive.google.com/file/d/1-uJKRQS5hjKJNLQaM0xBrSqHsrgoFTXE/view)
+
+## sample svg file
+1. [logo.svg](./examples/logo.svg)
+2. [Circle-ss.svg](./examples/Circle-ss.svg)
+3. [Square-SVG.svg](./examples/Square-SVG.svg)
+4. [Triangle-ss.svg](./examples/Triangle-ss.svg)
+
 ## Task
 
 The task is to build a Node.js command-line application that takes in user input to generate a logo and save it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a `.svg` file.
@@ -37,9 +46,9 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ```
 
 ## function description
-1. `node index.js` to start.
-2. import "inquirer" for questions.
-3. import "validate-color" for color (named or Hex) input validation.
+1. exec `node index.js` to start.
+2. application import "inquirer" for questions.
+3. application import "validate-color" for color (named or Hex) input validation.
 
 ## directory structure
  start with a directory structure that looks like the following example:
